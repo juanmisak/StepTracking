@@ -4,5 +4,8 @@
     <string name="app_name">StepTracker</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="tiempo">Tiempo</string>
+    <string name="minuto">minutos</string>
+    <integer-array name="minutos"></integer-array>
 
 </resources>
