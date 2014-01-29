@@ -22,6 +22,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="espol.fiec.steptracker.VtnRecorridos"
+            android:label="@string/title_activity_vtn_recorridos" >
+        </activity>
+        
+        <activity
+            android:name="espol.fiec.steptracker.MapActivity"
+            android:label="Mapa" >
+        </activity>
     </application>
 
 </manifest>

@@ -2,12 +2,16 @@ package espol.fiec.steptracker;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
 import android.widget.NumberPicker;
 
 public class MainActivity extends Activity {
 	 NumberPicker nP;
 	 String[] min = new String[10];
+	 Button btRecorridos;
 	 	 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +28,14 @@ public class MainActivity extends Activity {
         nP.setWrapSelectorWheel(false);
         nP.setDisplayedValues(min);
         
+        btRecorridos = (Button)findViewById(R.id.btRecorridos);
+        btRecorridos.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+            Intent i = new Intent(MainActivity.this, VtnRecorridos.class);
+            startActivity(i);
+            } 
+         });
+      
         
         
         
