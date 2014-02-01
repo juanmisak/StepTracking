@@ -14,10 +14,9 @@ import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.CalendarView.OnDateChangeListener;
 import android.widget.Toast;
-
 public class VtnRecorridos extends Activity {
 
-	Button btAtras;
+	Button btAtras, btMapa;
 	CalendarView calendario;
 	
 	@Override
@@ -33,16 +32,25 @@ public class VtnRecorridos extends Activity {
             }
         });
 		
+		btMapa = (Button)findViewById(R.id.btMapa);
+		btMapa.setOnClickListener(new View.OnClickListener() {			 
+            public void onClick(View arg0) {
+                //Closing SecondScreen Activity
+                finish();
+                setContentView(R.layout.activity_map);   
+            }
+        });
+		
 		
 		calendario = (CalendarView)findViewById(R.id.calendarView);
 		calendario.setOnDateChangeListener(new OnDateChangeListener(){		 
 			public void onSelectedDayChange(CalendarView view,int year, int month, int dayOfMonth) {
 				DialogoPersonalizado d = new DialogoPersonalizado();
 				FragmentManager f = getFragmentManager();
-				d.show(f, "recorrido");
+				d.show(f,"recorrido");
 				
-				//Toast.makeText(getApplicationContext(),"Aqui saldrá la ventana",Toast.LENGTH_SHORT).show();
-				//Toast.makeText(getApplicationContext(),dayOfMonth +"/"+month+"/"+ year,Toast.LENGTH_SHORT).show();
+				Toast.makeText(getApplicationContext(),"Aqui saldrï¿½ la ventana",Toast.LENGTH_SHORT).show();
+				Toast.makeText(getApplicationContext(),dayOfMonth +"/"+month+"/"+ year,Toast.LENGTH_SHORT).show();
 				
 			}
 		});
