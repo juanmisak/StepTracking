@@ -9,6 +9,6 @@ package espol.fiec.steptracker;
 
 public final class Manifest {
     public static final class permission {
-        public static final String MAPS_RECEIVE="edu.espol.appeventos.permission.MAPS_RECEIVE";
+        public static final String MAPS_RECEIVE="espol.fiec.steptracker.permission.MAPS_RECEIVE";
     }
 }

@@ -36,7 +36,7 @@ public class VtnRecorridos extends Activity {
 		btMapa.setOnClickListener(new View.OnClickListener() {			 
             public void onClick(View arg0) {
                 //Closing SecondScreen Activity
-                finish();
+                
                 setContentView(R.layout.activity_map);   
             }
         });

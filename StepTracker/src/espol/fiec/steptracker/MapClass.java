@@ -1,5 +1,11 @@
 package espol.fiec.steptracker;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.CameraPosition;
+import com.google.android.gms.maps.model.LatLng;
+
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
@@ -16,7 +22,7 @@ public class MapClass extends FragmentActivity{
 		try {
             // Loading map
             initilizeMap();
-            googleMap.setMyLocationEnabled(true);s
+            googleMap.setMyLocationEnabled(true);
             CameraPosition cameraPosition = new CameraPosition.Builder().target(new LatLng(-2.203816,-79.897453)).zoom(13).build();
             googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
         } catch (Exception e) {
