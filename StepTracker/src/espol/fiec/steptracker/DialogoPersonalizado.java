@@ -15,6 +15,7 @@ public class DialogoPersonalizado extends DialogFragment {
     LayoutInflater inflater = getActivity().getLayoutInflater();
  
     builder.setView(inflater.inflate(R.layout.dialog_recorrido, null));
+    
  
     return builder.create();
     }
