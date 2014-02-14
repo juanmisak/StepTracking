@@ -10,6 +10,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import android.R;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -26,7 +27,7 @@ public class ActiviyMap extends android.support.v4.app.FragmentActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_activiy_map);
+		setContentView(R.layout.activiy_map);
 		
 		markerPoints = new ArrayList<LatLng>();
 

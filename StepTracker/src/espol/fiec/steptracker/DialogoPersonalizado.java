@@ -22,6 +22,7 @@ public class DialogoPersonalizado extends DialogFragment {
  
     builder.setView(inflater.inflate(R.layout.dialog_recorrido, null));
     
+<<<<<<< HEAD
    
     btVerMapa.setOnClickListener(new View.OnClickListener() {
         public void onClick(View arg0) {
@@ -29,6 +30,9 @@ public class DialogoPersonalizado extends DialogFragment {
         //startActivity(i);
         } 
      }); 
+=======
+ 
+>>>>>>> bdc37570d54ad4ee50dbebd785529bdffff80fa4
     return builder.create();
     }
     */

@@ -7,6 +7,8 @@ import android.app.Dialog;
 import android.app.DialogFragment;
 import android.app.FragmentManager;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
@@ -14,10 +16,9 @@ import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.CalendarView.OnDateChangeListener;
 import android.widget.Toast;
-
 public class VtnRecorridos extends Activity {
 
-	Button btAtras;
+	Button btAtras, btMapa;
 	CalendarView calendario;
 	
 	@Override
@@ -32,17 +33,37 @@ public class VtnRecorridos extends Activity {
                 finish();
             }
         });
-		
+
+
 		
 		calendario = (CalendarView)findViewById(R.id.calendarView);
-		calendario.setOnDateChangeListener(new OnDateChangeListener(){		 
+
+		
+		
+		calendario.setOnDateChangeListener(new OnDateChangeListener(){	
+
 			public void onSelectedDayChange(CalendarView view,int year, int month, int dayOfMonth) {
-				DialogoPersonalizado d = new DialogoPersonalizado();
-				FragmentManager f = getFragmentManager();
-				d.show(f, "recorrido");
+				final Dialog dialog = new Dialog(VtnRecorridos.this);
+				dialog.setContentView(R.layout.dialog_recorrido);
 				
-				//Toast.makeText(getApplicationContext(),"Aqui saldrá la ventana",Toast.LENGTH_SHORT).show();
-				//Toast.makeText(getApplicationContext(),dayOfMonth +"/"+month+"/"+ year,Toast.LENGTH_SHORT).show();
+				dialog.show();
+				
+				
+				
+				Button btMapa = (Button) dialog.findViewById(R.id.btMapa);
+				btMapa.setOnClickListener(new View.OnClickListener() {
+
+					// Closing SecondScreen Activity
+					public void onClick(View arg0) {
+						
+						Intent i = new Intent(VtnRecorridos.this, MapClass.class);
+						startActivity(i);
+						
+					}
+				});
+				
+				Toast.makeText(getApplicationContext(),"Aqui saldrï¿½ la ventana",Toast.LENGTH_SHORT).show();
+				Toast.makeText(getApplicationContext(),dayOfMonth +"/"+month+"/"+ year,Toast.LENGTH_SHORT).show();
 				
 			}
 		});
