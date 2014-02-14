@@ -1,62 +1,79 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#8B8B8B"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/fondo"
+    android:orientation="vertical"
+    android:gravity="center"
     tools:context=".MainActivity" >
 
-    <NumberPicker
-        android:id="@+id/nPminutos"
-        android:layout_width="wrap_content"
+   <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="65dp"
-        android:orientation="vertical" />
+        android:orientation="horizontal"
+        android:gravity="center" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/nPminutos"
-        android:layout_marginBottom="54dp"
-        android:layout_marginRight="27dp"
-        android:layout_toLeftOf="@+id/nPminutos"
-        android:text="Tiempo"
-        android:textSize="18dp" />
+        <TextView
+            android:id="@+id/tvTiempo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tiempo"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:paddingRight="20dp"
+            android:textSize="25dp" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        <NumberPicker
+            android:id="@+id/nPminutos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"  
+            android:text="min"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:paddingLeft="20dp"
+            android:paddingRight="40dp"
+            android:textSize="22dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView1"
-        android:layout_alignBottom="@+id/textView1"
-        android:layout_marginLeft="30dp"
-        android:layout_toRightOf="@+id/nPminutos"
-        android:text="min"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textSize="18dp" />
+        android:gravity="center"
+        android:paddingTop="20dp" >
 
     <ToggleButton
         android:id="@+id/toggleButton1"
-        android:layout_width="wrap_content"
+		android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:textOn=""
+        android:textOff=""
+        android:background="@drawable/toggle_style"
+   		/>
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/nPminutos"
-        android:layout_marginTop="56dp"
-        android:layout_toRightOf="@+id/textView1"
-        android:text="ToggleButton" />
+        android:gravity="center" 
+        android:paddingTop="20dp">
 
-    <Button
-        android:id="@+id/btRecorridos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="34dp"
-        android:text="Recorridos" />
-
-</RelativeLayout>
+	    <ToggleButton
+	        android:id="@+id/toggleButton2"
+			android:layout_width="100dp"
+	        android:layout_height="100dp"
+	        android:textOn=""
+	        android:textOff=""
+	        android:background="@drawable/recorridos_style"
+	   		/>
+	    
+	 </LinearLayout>
+</LinearLayout>

@@ -7,14 +7,38 @@
     <uses-sdk
         android:minSdkVersion="11"
         android:targetSdkVersion="16" />
+    
+    <permission
+        android:name="espol.fiec.steptracker.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="espol.fiec.steptracker.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+    
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBLKVE8dpo1fGPxsfaHijPvHvUp1FQxbKs" />
+        
         <activity
             android:name="espol.fiec.steptracker.MainActivity"
+            android:screenOrientation="portrait"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,12 +48,18 @@
         </activity>
         <activity
             android:name="espol.fiec.steptracker.VtnRecorridos"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_vtn_recorridos" >
         </activity>
-        
         <activity
             android:name="espol.fiec.steptracker.MapActivity"
+            android:screenOrientation="portrait"
             android:label="Mapa" >
+        </activity>
+        <activity
+            android:name="espol.fiec.steptracker.ActiviyMap"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_activiy_map" >
         </activity>
     </application>
 

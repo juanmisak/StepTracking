@@ -10,5 +10,6 @@
     <integer-array name="minutos"></integer-array>
 
     <string name="title_activity_vtn_recorridos">VtnRecorridos</string>
+    <string name="title_activity_activiy_map">Recorridos</string>
 
 </resources>
